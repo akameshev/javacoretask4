@@ -13,6 +13,7 @@ import java.util.Locale;
 public class Main {
     public static void main(String[] args) {
 
+
         Employee employee = new Employee.EmployeeBuilder()
                 .id(1)
                 .name("Jessica")
@@ -36,16 +37,28 @@ public class Main {
                 .gender(Gender.MALE)
                 .salary(20000)
                 .build();
-
+        /**
+         * В основной программе создайте руководителя и поместите его в общий массив сотрудников.
+         */
         List<Employee> employees = new ArrayList<>();
         employees.add(employee);
         employees.add(employee2);
         employees.add(director);
+        /**
+         * Написать прототип компаратора - метод внутри класса сотрудника,
+         * сравнивающий две даты, представленные в виде трёх чисел гггг-мм-дд,
+         * без использования условного оператора.
+         * И  СОБСТВЕННО РЕАЛИЗАЦИЯ
+         */
+        employees.sort(Employee::compareTo);
         System.out.println("Before raising the salary");
         employees.forEach(System.out::println);
         System.out.println("After raising the salary");
+        /**
+         * Повысьте зарплату всем сотрудникам и проследите, чтобы зарплата руководителя не повысилась.
+         */
         for (Employee emp : employees) {
-            Employee.updateSalary(emp);
+            Director.updateSalary(emp);
             System.out.println(emp.toString());
         }
 

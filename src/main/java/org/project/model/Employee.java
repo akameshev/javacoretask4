@@ -50,15 +50,16 @@ public class Employee implements Comparable<Employee> {
         }
     }
     //endregion
+
+    /**
+     * Написать прототип компаратора - метод внутри класса сотрудника,
+     * сравнивающий две даты, представленные в виде трёх чисел гггг-мм-дд,
+     * без использования условного оператора.
+     */
     @Override
     public int compareTo(Employee o) {
         return this.birthday.compareTo(o.birthday);
     }
 
-    public static void updateSalary(Employee employee) {
-        if (employee.getClass()==Employee.class) {
-            employee.setSalary(employee.getSalary() * 1.25);
-        }
-        else employee.setSalary(employee.getSalary() +0);
-    }
+
 }
