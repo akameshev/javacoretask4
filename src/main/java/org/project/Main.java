@@ -91,18 +91,9 @@ public class Main {
                     break;
                 default:
                     System.out.println("No holidays today, sorry((");
-
+                    break;
             }
         }
-//            for (Employee employee : employees) {
-//                if (employee.getGender() == Gender.FEMALE && (LocalDate.now().getMonth().getValue() == 11 && LocalDate.now().getDayOfMonth() == 26)) {
-//                    System.out.println("Dear " + employee.getName() + ", We are congregate you with 8 march ");
-//                } else if (employee.getGender() == Gender.MALE && (LocalDate.now().getMonth().getValue() == 2 && LocalDate.now().getDayOfMonth() == 23)) {
-//                    System.out.println("Dear " + employee.getName() + ", We are congregate you with 23 february ");
-//                } else {
-//                    System.out.println("There are no Holidays today");
-//                }
-//            }
     }
     private static Holidays validateHolidays() {
         if (LocalDate.now().getMonth().getValue()==3 && LocalDate.now().getDayOfMonth()==8)
