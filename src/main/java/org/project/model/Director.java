@@ -6,11 +6,7 @@ import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
 
-/**
- * Опишите класс руководителя, наследник от сотрудника.
- * Перенесите статический метод повышения зарплаты в класс руководителя,
- * модифицируйте метод таким образом, чтобы он мог поднять заработную плату всем, кроме руководителей.
- */
+
 public class Director extends Employee{
 
     public Director(int id, String name, LocalDate birthday, Gender gender, double salary) {

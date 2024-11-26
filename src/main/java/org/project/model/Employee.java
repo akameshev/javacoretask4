@@ -14,6 +14,9 @@ public class Employee implements Comparable<Employee> {
     private int id;
     private String name;
     private LocalDate birthday;
+    /**
+     * Добавить в сотрудника свойство «пол» со значением созданного перечисления.
+     */
     private Gender gender;
     private double salary;
 
@@ -51,15 +54,58 @@ public class Employee implements Comparable<Employee> {
     }
     //endregion
 
-    /**
-     * Написать прототип компаратора - метод внутри класса сотрудника,
-     * сравнивающий две даты, представленные в виде трёх чисел гггг-мм-дд,
-     * без использования условного оператора.
-     */
     @Override
     public int compareTo(Employee o) {
         return this.birthday.compareTo(o.birthday);
     }
+
+    /**
+     * Добавить геттеры, сеттеры.(хотя я использовал Ломбок, но добавил так как указано в задании)
+     * @return
+     */
+    //region Getters and Setters
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public LocalDate getBirthday() {
+        return birthday;
+    }
+
+    public void setBirthday(LocalDate birthday) {
+        this.birthday = birthday;
+    }
+
+    public Gender getGender() {
+        return gender;
+    }
+
+    public void setGender(Gender gender) {
+        this.gender = gender;
+    }
+
+    public double getSalary() {
+        return salary;
+    }
+
+    public void setSalary(double salary) {
+        this.salary = salary;
+    }
+
+    //endregion
 
 
 }
