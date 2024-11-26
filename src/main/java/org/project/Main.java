@@ -47,7 +47,6 @@ public class Main {
 
     }
 
-
     /**
      * Добавить в основную программу перечисление с праздниками
      * (нет праздника, Новый Год, 8 марта, 23 февраля), написать метод,
@@ -59,20 +58,6 @@ public class Main {
 
     private static void congratulateEmployees(List<Employee> employees) {
         for (Employee employee : employees) {
-//            if (validateHolidays()==Holidays.NEW_YEAR){
-//                System.out.println("Congratulations! Happy new year!" + employee.getName());
-//                return;
-//            }
-//            if (employee.getGender() == Gender.FEMALE && validateHolidays()==Holidays.MARCH_8) {
-//                System.out.println("Dear " + employee.getName() + ", We are congregate you with 8 march ");
-//            }
-//            if (employee.getGender() == Gender.MALE && validateHolidays()==Holidays.FEBRUARY_23) {
-//                System.out.println("Dear " + employee.getName() + ", We are congregate you with 23 february ");
-//            }
-//            else {
-//                System.out.println("There are no Holidays today for " + employee.getName());
-//
-//            }
             switch (validateHolidays()){
                 case MARCH_8:
                     if (employee.getGender() == Gender.MALE) {
